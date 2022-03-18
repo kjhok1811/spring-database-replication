@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    replication:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: ${jdbc.username}
+      password: ${jdbc.password}
+      write:
+        name: write
+        url: ${jdbc.write.url}
+      reads:
+        - name: read1
+          url: ${jdbc.read1.url}
